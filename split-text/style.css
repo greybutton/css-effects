@@ -1,0 +1,56 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.effect,
+.effect-edit {
+	font-size: 100px;
+	font-weight: 900;
+  position: relative;
+}
+
+.effect {
+	color: black;
+}
+
+.effect::before,
+.effect::after {
+	content: attr(data-heading);
+	position: absolute;
+	left: 0;
+	overflow: hidden;
+}
+
+.effect::before {
+	height: 51%;
+	color: white;
+}
+
+.effect::after {
+	transform: translateX(5px);
+	height: 49%;
+	color: black;
+}
+
+.effect-edit {
+	color: blue;
+}
+
+.effect-edit::before,
+.effect-edit::after {
+	content: attr(data-heading);
+	position: absolute;
+	left: 0;
+	overflow: hidden;
+}
+
+.effect-edit::before {
+	height: 51%;
+	color: red;
+}
+
+.effect-edit::after {
+	transform: translateX(5px);
+	height: 49%;
+	color: green;
+}
